@@ -113,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
             clear();
         });
         button_pm_main.setOnClickListener(view -> {
+            plusMinus();
         });
         button_hundred_main.setOnClickListener(view -> {
         });
@@ -152,6 +153,10 @@ public class MainActivity extends AppCompatActivity {
         num1 = 0;
         num2 = 0;
         text_result_main.setText("0");
+    }
+
+    private void plusMinus(){
+        text_result_main.setText(String.valueOf((Integer.parseInt(text_result_main.getText().toString()) * -1))); ;
     }
 
     private void numButton(int num) {
