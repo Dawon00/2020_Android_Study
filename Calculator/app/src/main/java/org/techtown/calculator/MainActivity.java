@@ -3,6 +3,7 @@ package org.techtown.calculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ComponentName;
+import android.content.Intent;
 import android.media.audiofx.Equalizer;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     //코드에서 사용할 뷰 선언
 
+
     TextView text_result_main;
+    Button button_mc_main;
+    Button button_mr_main;
+    Button button_mp_main;
+
     Button button_c_main;
     Button button_pm_main;
     Button button_hundred_main;
@@ -77,9 +83,21 @@ public class MainActivity extends AppCompatActivity {
         button_8_main = (Button) findViewById(R.id.button_8_main);
         button_9_main = (Button) findViewById(R.id.button_9_main);
         button_backspace_main = (Button) findViewById(R.id.button_backspace_main);
-
+        button_mc_main = (Button) findViewById(R.id.button_mc_main);
+        button_mr_main = (Button) findViewById(R.id.button_mr_main);
+        button_mp_main = (Button) findViewById(R.id.button_mp_main);
 
         //코드에서 사용할 뷰에 setOnClickListener 을 통해 리스너 등록
+        button_mc_main.setOnClickListener(view -> {
+            goToTamago();
+        });
+        button_mr_main.setOnClickListener(view -> {
+            goToTamago();
+        });
+        button_mp_main.setOnClickListener(view -> {
+            goToTamago();
+        });
+
         button_0_main.setOnClickListener(view -> {
             numButton(0);
         });
@@ -141,6 +159,11 @@ public class MainActivity extends AppCompatActivity {
         button_result_main.setOnClickListener(view -> {
             result();
         });
+    }
+
+    private void goToTamago(){
+        Intent intent = new Intent(getApplicationContext(), TamagoActivity.class);
+        startActivity(intent);
     }
 
     private void backspace(){
