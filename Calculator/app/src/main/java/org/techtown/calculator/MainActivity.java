@@ -11,14 +11,16 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.math.BigDecimal;
+
 public class MainActivity extends AppCompatActivity {
 
     enum Operation {
         MINUS, PLUS, MULTIPLE, DIVIDE
     }
 
-    int num1;
-    int num2;
+    double num1;
+    double num2;
     Operation operation;
     boolean isOperated = false;
 
@@ -116,8 +118,10 @@ public class MainActivity extends AppCompatActivity {
             plusMinus();
         });
         button_hundred_main.setOnClickListener(view -> {
+            percentage();
         });
         button_dot_main.setOnClickListener(view -> {
+            dot();
         });
         button_backspace_main.setOnClickListener(view -> {
             backspace();
@@ -156,7 +160,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void plusMinus(){
-        text_result_main.setText(String.valueOf((Integer.parseInt(text_result_main.getText().toString()) * -1))); ;
+        text_result_main.setText(String.valueOf((Float.parseFloat(text_result_main.getText().toString()) * -1))); ;
+    }
+
+    private void dot(){
+        String result = text_result_main.getText().toString();
+        if(!result.contains(".")){
+            result += ".";
+            text_result_main.setText(result);
+        }
+    }
+
+    private void percentage(){
+        text_result_main.setText(String.valueOf((Double.parseDouble(text_result_main.getText().toString()) * 0.01)));
     }
 
     private void numButton(int num) {
@@ -172,30 +188,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void operateButton(Operation operate) {
-        num1 = Integer.parseInt(text_result_main.getText().toString());
+        num1 = Double.parseDouble(text_result_main.getText().toString());
         operation = operate;
         isOperated = true;
     }
 
     private void result() {
-        num2 = Integer.parseInt(text_result_main.getText().toString());
+        num2 = Double.parseDouble(text_result_main.getText().toString());
 
         switch (operation) {
             case PLUS:
                 num1 += num2;
-                text_result_main.setText(String.valueOf(num1));
             case MINUS:
                 num1 -= num2;
-                text_result_main.setText(String.valueOf(num1));
                 break;
             case MULTIPLE:
                 num1 *= num2;
-                text_result_main.setText(String.valueOf(num1));
                 break;
             case DIVIDE:
                 num1 /= num2;
-                text_result_main.setText(String.valueOf(num1));
                 break;
         }
+        BigDecimal number = new BigDecimal(num1);
+        text_result_main.setText(number.stripTrailingZeros().toPlainString());
     }
 }
