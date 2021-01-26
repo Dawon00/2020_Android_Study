@@ -9,11 +9,12 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/text_result_main"
+        android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="5"
         android:gravity="center|right|bottom"
-        android:text="0"
         android:textColor="@color/white"
         android:textSize="60dp" />
     <TableRow
@@ -24,20 +25,22 @@
 
 
         <Button
-            android:id="@+id/btnC"
+            android:id="@+id/button_c_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:insetLeft="6dp"
             android:insetRight="6dp"
             android:insetBottom="6dp"
             android:text="C"
+            android:textColor="@color/white"
             android:textSize="35dp"
             app:backgroundTint="#454444"></Button>
         <Button
-            android:id="@+id/btnMC"
+            android:id="@+id/button_mc_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="MC"
+            android:textColor="@color/white"
             android:textSize="30dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -45,10 +48,11 @@
             app:backgroundTint="#454444">
         </Button>
         <Button
-            android:id="@+id/btnMR"
+            android:id="@+id/button_mr_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="MR"
+            android:textColor="@color/white"
             android:textSize="30dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -56,10 +60,11 @@
             app:backgroundTint="#454444">
         </Button>
         <Button
-            android:id="@+id/btnM"
+            android:id="@+id/button_mp_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="M+"
+            android:textColor="@color/white"
             android:textSize="30dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -74,7 +79,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btnX"
+            android:id="@+id/button_backspace_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:insetLeft="6dp"
@@ -84,12 +89,13 @@
             app:icon="@drawable/ic_baseline_backspace_40dp"
             app:iconGravity="textStart"
             app:iconPadding="8dp"
-            app:iconSize="40dp"></Button>
+            app:iconSize="30dp"></Button>
         <Button
-            android:id="@+id/btnPlusMinus"
+            android:id="@+id/button_pm_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="±"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -97,10 +103,11 @@
             app:backgroundTint="#454444">
         </Button>
         <Button
-            android:id="@+id/btnPercent"
+            android:id="@+id/button_hundred_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="%"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -108,10 +115,11 @@
             app:backgroundTint="#454444">
         </Button>
         <Button
-            android:id="@+id/btnDivision"
+            android:id="@+id/button_divide_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="÷"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -126,10 +134,11 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btn7"
+            android:id="@+id/button_7_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="7"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -137,10 +146,11 @@
             app:backgroundTint="#252424"></Button>
 
         <Button
-            android:id="@+id/btn8"
+            android:id="@+id/button_8_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="8"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -148,20 +158,22 @@
             app:backgroundTint="#252424"></Button>
 
         <Button
-            android:id="@+id/btn9"
+            android:id="@+id/button_9_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="9"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
             android:insetBottom="6dp"
             app:backgroundTint="#252424"></Button>
         <Button
-            android:id="@+id/btnMultiply"
+            android:id="@+id/button_multiple_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="×"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -171,15 +183,15 @@
     </TableRow>
     <TableRow
         android:layout_weight="2"
-
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btn4"
+            android:id="@+id/button_4_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="4"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -187,10 +199,11 @@
             app:backgroundTint="#252424"></Button>
 
         <Button
-            android:id="@+id/btn5"
+            android:id="@+id/button_5_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="5"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -198,20 +211,22 @@
             app:backgroundTint="#252424"></Button>
 
         <Button
-            android:id="@+id/btn6"
+            android:id="@+id/button_6_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="6"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
             android:insetBottom="6dp"
             app:backgroundTint="#252424"></Button>
         <Button
-            android:id="@+id/btnMinus"
+            android:id="@+id/button_minus_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="-"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -227,10 +242,11 @@
 
         <Button
 
-            android:id="@+id/btn1"
+            android:id="@+id/button_1_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="1"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -238,10 +254,11 @@
             app:backgroundTint="#252424"></Button>
 
         <Button
-            android:id="@+id/btn2"
+            android:id="@+id/button_2_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="2"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -249,20 +266,22 @@
             app:backgroundTint="#252424"></Button>
 
         <Button
-            android:id="@+id/btn3"
+            android:id="@+id/button_3_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="3"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
             android:insetBottom="6dp"
             app:backgroundTint="#252424"></Button>
         <Button
-            android:id="@+id/btnPlus"
+            android:id="@+id/button_add_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="+"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -277,11 +296,12 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/btn0"
+            android:id="@+id/button_0_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_span="2"
             android:text="0"
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -291,10 +311,11 @@
         </Button>
 
         <Button
-            android:id="@+id/btn."
+            android:id="@+id/button_dot_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="."
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
@@ -302,10 +323,11 @@
             app:backgroundTint="#252424"></Button>
 
         <Button
-            android:id="@+id/btnEqual"
+            android:id="@+id/button_result_main"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="="
+            android:textColor="@color/white"
             android:textSize="35dp"
             android:insetLeft="6dp"
             android:insetRight="6dp"
