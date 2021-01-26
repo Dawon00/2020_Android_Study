@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -118,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         button_dot_main.setOnClickListener(view -> {
         });
         button_backspace_main.setOnClickListener(view -> {
+            backspace();
         });
         button_divide_main.setOnClickListener(view -> {
             operateButton(Operation.DIVIDE);
@@ -134,6 +136,15 @@ public class MainActivity extends AppCompatActivity {
         button_result_main.setOnClickListener(view -> {
             result();
         });
+    }
+
+    private void backspace(){
+        String nowNum = text_result_main.getText().toString();
+        StringBuffer sb = new StringBuffer(nowNum);
+        sb.deleteCharAt(sb.length()-1);
+        if(sb.toString().equals("")) sb.append("0");
+        text_result_main.setText(sb.toString());
+
     }
 
     private void clear() {
