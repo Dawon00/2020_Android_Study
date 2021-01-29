@@ -19,6 +19,30 @@ public class MainActivity extends AppCompatActivity {
     enum Operation {
         MINUS, PLUS, MULTIPLE, DIVIDE
     }
+    enum Page{
+        TAMAGO, MEMO
+    };
+
+
+    private void goToTamago(){
+        Intent intent = new Intent(getApplicationContext(), TamagoActivity.class);
+        startActivity(intent);
+    }
+
+    private void goToPage(Page page){
+        Intent intent;//Intent 선언
+        switch (page){//어떤 Intent 로 정의해줄지 정함
+            case TAMAGO://goToPage 함수의 인자로 Page.TAMAGO가 들어왔을때
+                intent = new Intent(getApplicationContext(), TamagoActivity.class);
+                break;
+            case MEMO://goToPage 함수의 인자로 Page.MEMO가 들어왔을때
+                intent = new Intent(getApplicationContext(), MemoActivity.class);
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + page);
+        }
+        startActivity(intent);//정의해준 Intent로 startActivity 하여 화면 전환
+    }
 
     double num1;
     double num2;
@@ -92,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             goToTamago();
         });
         button_mr_main.setOnClickListener(view -> {
-            goToTamago();
+            goToPage(Page.MEMO);
         });
         button_mp_main.setOnClickListener(view -> {
             goToTamago();
@@ -161,10 +185,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void goToTamago(){
-        Intent intent = new Intent(getApplicationContext(), TamagoActivity.class);
-        startActivity(intent);
-    }
+
 
     private void backspace(){
         String nowNum = text_result_main.getText().toString();
