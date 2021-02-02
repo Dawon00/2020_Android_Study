@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         MINUS, PLUS, MULTIPLE, DIVIDE
     }
     enum Page{
-        TAMAGO, MEMO
+        TAMAGO, MEMO, RECYCLE
     };
 
 
@@ -38,7 +38,10 @@ public class MainActivity extends AppCompatActivity {
             case MEMO://goToPage 함수의 인자로 Page.MEMO가 들어왔을때
                 intent = new Intent(getApplicationContext(), MemoActivity.class);
                 break;
-            default:
+            case RECYCLE:
+                intent = new Intent(getApplicationContext(), RecyclerActivity.class);
+                break;
+                default:
                 throw new IllegalStateException("Unexpected value: " + page);
         }
         startActivity(intent);//정의해준 Intent로 startActivity 하여 화면 전환
@@ -119,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
             goToPage(Page.MEMO);
         });
         button_mp_main.setOnClickListener(view -> {
-            goToTamago();
+            goToPage(Page.RECYCLE);
         });
 
         button_0_main.setOnClickListener(view -> {
